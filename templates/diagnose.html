@@ -1,0 +1,50 @@
+{% extends "base_template.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+
+{% block title %}
+Diagnose
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="accordion" id="mammogram">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Diagnose using the Mammogram Image
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body col">
+                            {{ render_form(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="accordion" id="dataset">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Diagnose using the Wisconsin (Diagnostic) Dataset
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
+                        <div class="accordion-body col">
+                            {{ render_form(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

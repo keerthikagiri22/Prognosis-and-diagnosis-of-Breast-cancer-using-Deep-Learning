@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{ bootstrap.load_css() }}
+    <title>
+        Prognosis & Diagnosis of Breast Cancer using Deep Learning - {% block title %}{% endblock %}
+    </title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #f0c5f9;" data-bs-theme="light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Prognosis & Diagnosis of Breast Cancer using Deep Learning</a>
+        </div>
+    </nav>
+    <div class="container" style="padding: 20px">
+        {% block content %}{% endblock %}
+
+        {{ bootstrap.load_js() }}
+    </div>
+
+</body>
+
+</html>
